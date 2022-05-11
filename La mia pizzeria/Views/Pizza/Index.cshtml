@@ -1,0 +1,22 @@
+﻿<h1>Index Pizza</h1>
+@model List<Pizza>
+
+<div class="container-fluid">
+  <div class="row mt-5">
+      @foreach(Pizza pizza in Model)
+      {
+        <div class="col-sm-3 mb-3">
+          <div class="card" style="width: 18rem;">
+            <img src=@pizza.Image class="card-img" alt="Immagine di una pizza margherita">
+            <div class="card-body">
+              <h5 class="card-title">@pizza.Name</h5>
+              <p class="card-text">@pizza.Descrizione</p>
+            </div>
+            <div class="card-body">
+              <p class="btn btn-secondary">5 €</p>
+            </div>
+          </div>
+        </div>
+      }
+  </div>
+</div>
